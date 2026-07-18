@@ -38,17 +38,17 @@ Mark **Priority = YES** if the account shows ANY of the following (not all requi
 These are the prospects who already believe in DM-based conversion — they're the easiest sell on installing a team to run it. Everyone else who clears the qualification bar still gets added, just without the Priority flag.
 
 ## Signal Reference (context for the dossier, not a gate)
-Use these to write the Signals Found / Opener Angle for every prospect — they inform the pitch even when they don't affect qualification:
+Use these to write the Signals Found / Opener Angle for every prospect — they inform the pitch even when they don't affect qualification. Points are the original 100-point weighting; keep using them to compute the descriptive Score, even though no point threshold gates entry anymore:
 
-| Signal | How to detect |
-|---|---|
-| Existing setter/team language | Bio or captions mention "my team", "DM my team", "message my assistant", replies from team accounts, "setter" mentions — rare, but the strongest possible signal when present |
-| Link-in-bio funnel or Calendly | Bio link resolves to a funnel page, VSL, application form, Calendly/booking page, or link aggregator containing one |
-| Actively posting offers | Offer CTAs in recent captions/pinned posts within last 30 days ("DM me X", "apply", "spots open", program launches) |
-| Client results in highlights | Story highlights named Results/Transformations/Testimonials/Wins or equivalent. **Not available from any current Instagram-scraping actor** — always note as unavailable, never guess |
-| Post engagement | Use Median ER / like-comment ratio if Reels-view data isn't available (e.g. on Apify's Free plan, Reels analytics are blanked) |
+| Signal | Points | How to detect |
+|---|---|---|
+| Existing setter/team language | 25 | Bio or captions mention "my team", "DM my team", "message my assistant", replies from team accounts, "setter" mentions — rare, but the strongest possible signal when present |
+| Link-in-bio funnel or Calendly | 25 | Bio link resolves to a funnel page, VSL, application form, Calendly/booking page, or link aggregator containing one |
+| Actively posting offers | 20 | Offer CTAs in recent captions/pinned posts within last 30 days ("DM me X", "apply", "spots open", program launches) |
+| Client results in highlights | 15 | Story highlights named Results/Transformations/Testimonials/Wins or equivalent. **Not available from any current Instagram-scraping actor** — always note as unavailable, never guess |
+| Post engagement | 15 | Use Median ER / like-comment ratio if Reels-view data isn't available (e.g. on Apify's Free plan, Reels analytics are blanked) |
 
-A rough 0–100 score using the table above is still useful shorthand in Signals Found (e.g. "50/85, denominator reduced — highlights unavailable"), but it is descriptive, not a gate.
+Score = points earned / points possible, reported as a fraction shorthand in Signals Found (e.g. "50/85"). When a signal can't be checked at all for structural reasons (highlights unavailable from any current actor; Reels views blanked on the Free plan), drop its points from BOTH the numerator and the denominator — never guess a value and never penalize a prospect for a data gap. This score is descriptive only; it never gates entry (see Qualification Bar and Priority Tier above for what actually decides inclusion).
 
 ## Per-Prospect Dossier (one row per prospect)
 For every prospect that clears the qualification bar, write:
@@ -89,16 +89,16 @@ Auto-calculating formulas:
 - Booking rate = Booked / Interested
 - Weekly adds (this week vs last)
 
-### Tab 3: Dedupe Log
-All handles ever scraped (including sub-60 rejects) with reject reason. Check EVERY new handle against this tab before scoring. Never re-add a handle that exists in Pipeline or Dedupe Log.
+### Tab 3: DQ Leads
+Every handle that's been checked and disqualified, with a plain-language reason. Check EVERY new handle against this tab before scoring. Never re-add a handle that exists in Pipeline or DQ Leads — that handle has already been through the pipeline once, accepted or not.
 
 ## Workflow (per run)
 1. Pull similar accounts from seed handles via Apify (rotate seeds across runs; add high-scoring prospects as new seeds over time)
 2. Filter: followers ≥5k, English, active
 3. Scrape full profile data for survivors (bio, link, recent posts, highlights where available)
 4. Score against the model
-5. Dedupe against Tab 3
-6. Write everyone who clears the qualification bar to Pipeline with full dossier (flag Priority per the criteria above); log auto-disqualified handles to Dedupe Log with reason
+5. Check against DQ Leads (Tab 3)
+6. Write everyone who clears the qualification bar to Pipeline with full dossier (flag Priority per the criteria above); log auto-disqualified handles to DQ Leads with reason
 7. Report back: "X scraped, Y qualified (Z priority), top 3 prospects with scores"
 
 ## Volume Target
