@@ -1,5 +1,5 @@
 # CTO SYSTEM
-**Last Updated:** 2026-04-27
+**Last Updated:** 2026-07-18
 **Version:** 1.0.0
 **Owner:** CEO (Direct)
 **Managed by:** CTO + Specialist Network
@@ -101,6 +101,7 @@ cto-system/
 | CHATGPT | ChatGPT Specialist | `specialists/chatgpt/CHATGPT_SPECIALIST_PROMPT.md` |
 | CLAUDE-SPECIALIST | Claude Specialist | `specialists/claude/CLAUDE_SPECIALIST_PROMPT.md` |
 | PERPLEXITY | Perplexity Specialist | `specialists/perplexity/PERPLEXITY_SPECIALIST_PROMPT.md` |
+| PROSPECTING | Prospecting Specialist | `specialists/prospecting/PROSPECTING_SPECIALIST_PROMPT.md` |
 
 ---
 
