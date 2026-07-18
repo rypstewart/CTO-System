@@ -24,22 +24,34 @@ Target: **Any coach with a visible offer**, selling via Instagram.
 
 Secondary discovery: hashtag search (#onlinecoach #fitnesscoach #onlinefitnesscoach and niche-adjacent tags) — expect more noise, filter harder.
 
-## Scoring Model (100 points, threshold to enter sheet: 60)
+## Qualification Bar (revised 2026-07-18)
+**Add anyone with a real online business and a visible offer on Instagram.** This is intentionally broad — do not gate entry on a numeric score. The only exclusions are the auto-disqualify list below.
 
-| Signal | Points | How to detect |
-|---|---|---|
-| Existing setter/team language | 25 | Bio or captions mention "my team", "DM my team", "message my assistant", replies from team accounts, "setter" mentions |
-| Link-in-bio funnel or Calendly | 25 | Bio link resolves to a funnel page, VSL, application form, Calendly/booking page, or link aggregator containing one |
-| Actively posting offers | 20 | Offer CTAs in recent captions/pinned posts within last 30 days ("DM me X", "apply", "spots open", program launches) |
-| Client results in highlights | 15 | Story highlights named Results/Transformations/Testimonials/Wins or equivalent |
-| Story/reel engagement | 15 | Reel views and comment activity healthy relative to follower count (rough guide: reel views > 10% of followers, real comments not bot spam) |
+**Auto-disqualify (the only reasons to reject):** under 5k followers, non-English, no detectable offer or business at all, inactive (no posts in 60+ days), obvious fake/bought following (engagement wildly below follower count).
 
-**Priority tier:** Prospects scoring 25 on the setter/team signal are TOP priority — they already believe in the model. Mark these "Priority" in the sheet.
+## Priority Tier (revised 2026-07-18)
+Mark **Priority = YES** if the account shows ANY of the following (not all required):
+- An active DM funnel (e.g. "DM me X to book/get Y", "DM AUDIT to book a call")
+- A comment-for-lead-magnet / free-resource CTA (e.g. "Comment EBOOK", "Comment GUIDE", "Comment TOOLS")
+- A Calendly (or equivalent direct-booking) link in bio
 
-**Auto-disqualify:** under 5k followers, non-English, no detectable offer at all, inactive (no posts in 60+ days), obvious fake/bought following (engagement wildly below follower count).
+These are the prospects who already believe in DM-based conversion — they're the easiest sell on installing a team to run it. Everyone else who clears the qualification bar still gets added, just without the Priority flag.
+
+## Signal Reference (context for the dossier, not a gate)
+Use these to write the Signals Found / Opener Angle for every prospect — they inform the pitch even when they don't affect qualification:
+
+| Signal | How to detect |
+|---|---|
+| Existing setter/team language | Bio or captions mention "my team", "DM my team", "message my assistant", replies from team accounts, "setter" mentions — rare, but the strongest possible signal when present |
+| Link-in-bio funnel or Calendly | Bio link resolves to a funnel page, VSL, application form, Calendly/booking page, or link aggregator containing one |
+| Actively posting offers | Offer CTAs in recent captions/pinned posts within last 30 days ("DM me X", "apply", "spots open", program launches) |
+| Client results in highlights | Story highlights named Results/Transformations/Testimonials/Wins or equivalent. **Not available from any current Instagram-scraping actor** — always note as unavailable, never guess |
+| Post engagement | Use Median ER / like-comment ratio if Reels-view data isn't available (e.g. on Apify's Free plan, Reels analytics are blanked) |
+
+A rough 0–100 score using the table above is still useful shorthand in Signals Found (e.g. "50/85, denominator reduced — highlights unavailable"), but it is descriptive, not a gate.
 
 ## Per-Prospect Dossier (one row per prospect)
-For every prospect ≥60 points, write:
+For every prospect that clears the qualification bar, write:
 1. **Signals found** — bullet-style plain text: exactly what you saw and where ("Calendly in bio via Linktree; 'DM my team GROWTH' in pinned reel caption; Results highlight with 12 stories")
 2. **Opener angle** — ONE sentence identifying the specific hook Ry could open with, referencing something concrete from their content.
 
@@ -60,8 +72,8 @@ Sheet name: **Ry Stewart — Prospecting Pipeline**
 | Name | Display name |
 | Followers | Count at time of scrape |
 | Niche | e.g. fat loss, bodybuilding, mindset, business |
-| Score | 0–100 |
-| Priority | YES if setter-signal = 25 pts |
+| Score | 0–100 (descriptive shorthand only, see Signal Reference — not a qualification gate) |
+| Priority | YES if DM funnel, comment-for-freebie CTA, or Calendly link in bio (see Priority Tier) |
 | Signals Found | Dossier text |
 | Opener Angle | One-line hook |
 | Status | New / Sent / Replied / Interested / Booked / Closed / Dead |
@@ -86,7 +98,7 @@ All handles ever scraped (including sub-60 rejects) with reject reason. Check EV
 3. Scrape full profile data for survivors (bio, link, recent posts, highlights where available)
 4. Score against the model
 5. Dedupe against Tab 3
-6. Write ≥60 scores to Pipeline with full dossier; log everything else to Dedupe Log with reason
+6. Write everyone who clears the qualification bar to Pipeline with full dossier (flag Priority per the criteria above); log auto-disqualified handles to Dedupe Log with reason
 7. Report back: "X scraped, Y qualified (Z priority), top 3 prospects with scores"
 
 ## Volume Target
