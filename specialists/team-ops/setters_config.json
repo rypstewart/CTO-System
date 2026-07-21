@@ -1,0 +1,42 @@
+{
+  "_comment": "Manually maintained by Ry. weekly_goal = qualified calls booked target for the Mon-Sun week. habit = current personal coaching focus, blank until Ry provides one. Reference: fully ramped setters should be at minimum 10/week.",
+  "scorecard_channel": "#setting-targets",
+  "scorecard_channel_id": "C09P2RW56UA",
+  "setters": [
+    {
+      "airtable_name": "Bryan",
+      "slack_name": "Bryan García",
+      "slack_user_id": "U09KHB2G8KH",
+      "weekly_goal": 15,
+      "habit": ""
+    },
+    {
+      "airtable_name": "Cinthia",
+      "slack_name": "Cinthia Rodriguez",
+      "slack_user_id": "U09KVATQF61",
+      "weekly_goal": 10,
+      "habit": ""
+    },
+    {
+      "airtable_name": "Edgar",
+      "slack_name": "Edgar Mendez",
+      "slack_user_id": "U0A16K07JU9",
+      "weekly_goal": 10,
+      "habit": ""
+    },
+    {
+      "airtable_name": "Shauna",
+      "slack_name": "Shauna Mc Aleavey",
+      "slack_user_id": "U09KSCPAYF5",
+      "weekly_goal": 7,
+      "habit": ""
+    },
+    {
+      "airtable_name": "triumph",
+      "slack_name": "Triumph Sadiku",
+      "slack_user_id": "U0BD8BW9ZFH",
+      "weekly_goal": 7,
+      "habit": ""
+    }
+  ]
+}
