@@ -37,6 +37,13 @@
       "slack_user_id": "U0BD8BW9ZFH",
       "weekly_goal": 7,
       "habit": ""
+    },
+    {
+      "airtable_name": "johan",
+      "slack_name": "Johan Rodriguez",
+      "slack_user_id": "U09MV4VTYQ0",
+      "weekly_goal": 5,
+      "habit": ""
     }
   ]
 }
